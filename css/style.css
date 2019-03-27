@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+*{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.px-2 {
+  padding-left: ($spacer * .5) !important;
+  padding-right: ($spacer * .5) !important;
+}
+
+.box{
+  margin: 2%;
+}
+

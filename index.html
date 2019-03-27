@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <title>Debian Details Page for Microsoft Azure</title>
+      <link rel="icon" href="img/footer.png">
+   </head>
+   <body>
+      <nav class="navbar navbar-light" style="background-color: #dbdbdb;">
+         <a class="navbar-brand" href="#">
+         <img src="img/navlogo.png" width="auto" height="30" alt="Debian Logo">
+         </a>
+      </nav>
+      <div class="box">
+         <h1 class="px-2">Debian Details Finder for <img src="img/azure.png" height="40px"></h1>
+         <hr>
+         <p>As Debian Cloud Images are published to our various public cloud partners, this tool is for Microsoft Azure.</p>
+         <p>The Image Detail Finder for Microsoft Azure gets user the <strong>image URL and CLI command</strong> for a specific Debian version. This tool helps user to get the information accurately.</p>
+         <div class="card">
+            <h5 class="card-header">Find Image details here</h5>
+            <div class="card-body">
+               <h5 class="card-title">Select Debian version</h5>
+               <div class="form-group">
+                  <label for="exampleFormControlSelect1">Version (codename)</label>
+                  <select class="form-control" id="exampleFormControlSelect1" style="max-width: 50%">
+                     <option>9 (Stretch)</option>
+                     <option>8 (Jessie)</option>
+                     <option>7 (Wheezy)</option>
+                     <option>6.0 (Squeeze)</option>
+                     <option>5.0 (Lenny)</option>
+                     <option>4.0 (Etch)</option>
+                     <option>3.1.0 (Sarge)</option>
+                  </select>
+               </div>
+               <button href="#" class="btn">Show Results</button>
+            </div>
+         </div>
+         <br>
+         <div class="card mb-3">
+            <div class="card-header">Results for version <strong>9 (Stretch)</strong></div>
+            <div class="card-body">
+               <h5 class="card-title">URL to run this image on Azure:</h5>
+               <p class="bg-warning"><a href="https://portal.azure.com/#create/credativ.Debian9">https://portal.azure.com/#create/credativ.Debian9</a></p>
+               <h5 class="card-title">Command for CLI client:</h5>
+               <p class="bg-warning" id="p">az vm create --image credativ:9:latest $options</p>
+               <button onclick="copyToClipboard('#p')" class="btn">Copy Command</button>
+            </div>
+         </div>
+      </div>
+      <!-- Footer -->
+      <footer class="page-footer font-small" style="background-color: #dbdbdb;">
+         <!-- Footer Links -->
+         <!-- Copyright -->
+         <div class="footer-copyright text-center text-black-50 py-3">© 2019 Copyright:
+            <a class="dark-grey-text" href="https://Debian.org/"><img src="img/footer.png" width="30px">debian.org</a>
+         </div>
+         <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script type="text/javascript">
+         function copyToClipboard(element) {
+         var $temp = $("<input>");
+         $("body").append($temp);
+         $temp.val($(element).text()).select();
+         document.execCommand("copy");
+         $temp.remove();
+         }
+         
+      </script>
+   </body>
+</html>
