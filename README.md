@@ -4,6 +4,14 @@ The purpose of this project is demonstrate my HTML and styling + UX skills for D
 ### Project Overview
 > Developed a front-end for Debian Details Page for Microsoft Azure which is a applicant's task for [original project](https://wiki.debian.org/SummerOfCode2019/ApprovedProjects/DebianCloudImageFinder).
 
+### Applicant's Task
+The idea that they have for a "Details page" is to provide access to the latest and older Debian images of that specific cloud provider, helping user in scenarios like these:
+
+*"i want to run debian 9 on microsoft azure, where do i need to go to run this vm via the web interface (https://portal.azure.com/#create/credativ.Debian9, https://portal.microsoftazure.de/#create/credativ.Debian9 for Azure Germany)"
+*"how do i run it via the cli client (az vm create --image credativ:9:latest $options)"
+*"i want to run debian 8 on google compute engine, what is the exact url of this specific image version"
+
+
 ### Why This Project?
 * This version of webpage is responsive so it can be used on various devices.
 * Proper use of Bootstrap4.
